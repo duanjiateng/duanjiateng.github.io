@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
-<meta name="keywords" content="Arrays,Java,学习">
+  <meta name="description" content="LeetCode-162-寻找峰值１．题目：寻找峰值 峰值元素是指其值大于左右相邻值的元素。 给定一个输入数组 nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。 数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。 你可以假设 nums[-1] = nums[n] = -∞。 示例 1: 123输入: nums = [1,2,3,1]输出: 2解释:">
+<meta name="keywords" content="Java,峰值问题,二分法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈Arrays.asList()">
-<meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/asList/index.html">
+<meta property="og:title" content="LeetCode-162-寻找峰值">
+<meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/LeetCode-162/index.html">
 <meta property="og:site_name" content="Djt&#39;s Blog">
-<meta property="og:description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
+<meta property="og:description" content="LeetCode-162-寻找峰值１．题目：寻找峰值 峰值元素是指其值大于左右相邻值的元素。 给定一个输入数组 nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。 数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。 你可以假设 nums[-1] = nums[n] = -∞。 示例 1: 123输入: nums = [1,2,3,1]输出: 2解释:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-25T02:04:03.327Z">
+<meta property="og:updated_time" content="2019-03-25T11:57:42.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈Arrays.asList()">
-<meta name="twitter:description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
+<meta name="twitter:title" content="LeetCode-162-寻找峰值">
+<meta name="twitter:description" content="LeetCode-162-寻找峰值１．题目：寻找峰值 峰值元素是指其值大于左右相邻值的元素。 给定一个输入数组 nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。 数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。 你可以假设 nums[-1] = nums[n] = -∞。 示例 1: 123输入: nums = [1,2,3,1]输出: 2解释:">
 
 
 
 
 
 
-  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/25/asList/">
+  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/25/LeetCode-162/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>浅谈Arrays.asList() | Djt's Blog</title>
+  <title>LeetCode-162-寻找峰值 | Djt's Blog</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/25/asList/">
+    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/25/LeetCode-162/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Djt">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈Arrays.asList()
+          <h1 class="post-title" itemprop="name headline">LeetCode-162-寻找峰值
 
               
             
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2019-03-25 10:01:51 / Modified: 10:04:03" itemprop="dateCreated datePublished" datetime="2019-03-25T10:01:51+08:00">2019-03-25</time>
+              <time title="Created: 2019-03-25 19:55:16 / Modified: 19:57:42" itemprop="dateCreated datePublished" datetime="2019-03-25T19:55:16+08:00">2019-03-25</time>
             
 
             
@@ -388,14 +388,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/集合类/" itemprop="url" rel="index"><span itemprop="name">集合类</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -410,7 +403,7 @@
 
           
           
-            <span id="/2019/03/25/asList/" class="leancloud_visitors" data-flag-title="浅谈Arrays.asList()">
+            <span id="/2019/03/25/LeetCode-162/" class="leancloud_visitors" data-flag-title="LeetCode-162-寻找峰值">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -441,21 +434,24 @@
       
 
       
-        <h2 id="浅谈Arrays-asList"><a href="#浅谈Arrays-asList" class="headerlink" title="浅谈Arrays.asList()"></a>浅谈Arrays.asList()</h2><h3 id="１．什么Arrays-asList-？"><a href="#１．什么Arrays-asList-？" class="headerlink" title="１．什么Arrays.asList()？"></a>１．什么Arrays.asList()？</h3><p><code>asList()</code>是<code>Arrays</code>类中一个静态方法，主要作用是：将数组转换为<code>list</code>，也就是数组和集合连接在一起。</p>
-<h3 id="２．关于其使用的几个注意事项："><a href="#２．关于其使用的几个注意事项：" class="headerlink" title="２．关于其使用的几个注意事项："></a>２．关于其使用的几个注意事项：</h3><p>​    使用该方法时会有几大“坑”，同学们一定要注意。</p>
-<h4 id="2-1-不支持集合的add和remove方法"><a href="#2-1-不支持集合的add和remove方法" class="headerlink" title="2.1 不支持集合的add和remove方法"></a>2.1 不支持集合的<code>add</code>和<code>remove</code>方法</h4><p>​    使用工具类<code>Arrays.asList()</code>把数组转换成集合时，不能使用其修改集合相关的方法，它的<code>add/remove/clear</code>方法会抛出<code>UnsupportOperationException</code>异常。</p>
-<p>​    因为从源码分析，<code>asList</code>的返回对象是一个<code>Arrays</code>的内部类<code>ArrayList</code>，并没有实现集合的修改方法。</p>
-<p>​    源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Arrays</span> </span>&#123;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">asList</span><span class="params">(T... a)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Arrays.ArrayList(a);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">RandomAccess</span>, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//...</span></span><br><span class="line">    	ArrayList(E[] array) &#123;</span><br><span class="line">        	<span class="keyword">this</span>.a = (Object[])Objects.requireNonNull(array)</span><br><span class="line">    	&#125;</span><br><span class="line">  		<span class="comment">//...</span></span><br><span class="line">    &#125; </span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    因此，在使用其方法时，必须确保其长度不再改变。</p>
-<h4 id="2-2-该方法不适用于基本数据类型数组"><a href="#2-2-该方法不适用于基本数据类型数组" class="headerlink" title="2.2 该方法不适用于基本数据类型数组"></a>2.2 该方法不适用于基本数据类型数组</h4><p>​    先给大家做个演示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsListDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] nums = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">        List list = Arrays.asList(nums);</span><br><span class="line">        System.out.println(<span class="string">"list's size = "</span> + list.size());</span><br><span class="line">        <span class="comment">//结果：list's size = 1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    我们发现和我们想的并不一样，我们认为<code>list</code>的大小应该为３，现在却是１。这是因为，在<code>Arrays.asList</code>中，该方法接受一个变长参数，一般可看做数组参数，但是因为<code>int[]</code>本身就是一个类型，所以<code>nums</code>变量作为参数传递时，编译器认为只传了一个变量，这个变量的类型是<code>int[]</code>，所以<code>size</code>为1。</p>
-<p>​    基本类型是不能作为泛型的参数，按道理应该使用包装类型，但这里缺没有报错，因为数组是可以泛型化的，所以转换后在list中就有一个类型为int的数组。</p>
-<h4 id="2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"><a href="#2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。" class="headerlink" title="2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"></a>2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。</h4><p>​    注意:仅仅针对对象数组类型,基本数据类型数组不具备该特性 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsListDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] str = &#123;<span class="string">"Hello"</span>, <span class="string">"i'm"</span>, <span class="string">"Djt"</span>&#125;;</span><br><span class="line">        List&lt;String&gt; slist = Arrays.asList(str);</span><br><span class="line">        System.out.println(<span class="string">"str[2] = "</span> + str[<span class="number">2</span>]);</span><br><span class="line">    	<span class="comment">// 结果 : str[2] = Djt</span></span><br><span class="line">        slist.set(<span class="number">2</span>, <span class="string">"djt"</span>);</span><br><span class="line">        System.out.println(<span class="string">"str[2] = "</span> + str[<span class="number">2</span>]);</span><br><span class="line">    	<span class="comment">// 结果 : str[2] = djt</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    我们发现对<code>slist</code>进行修改，<code>str</code>中也发生了修改。Arrays.asList体现的是适配器模式，只是转换接口，后台的数据仍是数组。<code>slist</code>和<code>str</code>都是引用，他们指向的是同一个数组，指向同一个存储空间。</p>
-<p>​    <strong>如果要使用真正的<code>ArrayList</code>，用 ArrayList 的构造器可以将其转变成真正的 ArrayList。</strong></p>
+        <h2 id="LeetCode-162-寻找峰值"><a href="#LeetCode-162-寻找峰值" class="headerlink" title="LeetCode-162-寻找峰值"></a>LeetCode-162-寻找峰值</h2><h3 id="１．题目："><a href="#１．题目：" class="headerlink" title="１．题目："></a>１．题目：</h3><p>寻找峰值</p>
+<p>峰值元素是指其值大于左右相邻值的元素。</p>
+<p>给定一个输入数组 <code>nums</code>，其中 <code>nums[i] ≠ nums[i+1]</code>，找到峰值元素并返回其索引。</p>
+<p>数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。</p>
+<p>你可以假设 <code>nums[-1] = nums[n] = -∞</code>。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1,2,3,1]</span><br><span class="line">输出: 2</span><br><span class="line">解释: 3 是峰值元素，你的函数应该返回其索引 2。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1,2,1,3,5,6,4]</span><br><span class="line">输出: 1 或 5 </span><br><span class="line">解释: 你的函数可以返回索引 1，其峰值元素为 2；</span><br><span class="line">     或者返回索引 5， 其峰值元素为 6。</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<p>你的解法应该是 <em>O</em>(<em>logN</em>) 时间复杂度的。</p>
+<h3 id="２．解题："><a href="#２．解题：" class="headerlink" title="２．解题："></a>２．解题：</h3><p>​    首先找峰值值类似于找最值（或者是局部最值）。因此我们可以看做找最大值，要满足 <code>O(logN)</code> 时间复杂度，我们可以使用二分法找最大值。</p>
+<p>​    首先我们需要两个指针：<code>left</code>左指针和<code>right</code>右指针，<code>mid</code>为它们的中值。</p>
+<p>​    满足条件<code>nums[mid] &gt; nums[mid - 1] &amp;&amp; mid[mid] &gt; mid[mid + 1]</code>，就说明找到峰值；</p>
+<p>​    当<code>nums[mid] &lt; nums[mid + 1]</code>说明目前是在峰值的左坡，则峰值一定在<code>mid</code>的右边；</p>
+<p>​    当<code>nums[mid] &lt; nums[mid - 1]</code>说明目前是在峰值的右坡，则峰值一定在<code>mid</code>的左边；</p>
+<p>​    此时并没有结束，由于出现了<code>mid - 1</code>和<code>mid + 1</code>，所以我们必须考虑边界问题，峰值问题是两边是无穷小，因此当我们遇到边界问题时，可以取<code>Integer.MIN_VALUE</code>。</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findPeakElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.length &lt;= <span class="number">0</span> || nums == <span class="keyword">null</span>) </span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] &gt; ( mid - <span class="number">1</span> &gt;= <span class="number">0</span> ? nums[mid-<span class="number">1</span>] : Integer.MIN_VALUE ) &amp;&amp; (nums[mid] &gt; ( mid + <span class="number">1</span> &lt; nums.length ? nums[mid + <span class="number">1</span>] : Integer.MIN_VALUE)))&#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; ( mid - <span class="number">1</span> &gt;= <span class="number">0</span> ? nums[mid-<span class="number">1</span>] : Integer.MIN_VALUE )) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -479,11 +475,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
-          
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/峰值问题/" rel="tag"># 峰值问题</a>
+          
+            <a href="/tags/二分法/" rel="tag"># 二分法</a>
           
         </div>
       
@@ -496,8 +492,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/25/rbt/" rel="next" title="红黑树(RBT)">
-                <i class="fa fa-chevron-left"></i> 红黑树(RBT)
+              <a href="/2019/03/25/asList/" rel="next" title="浅谈Arrays.asList()">
+                <i class="fa fa-chevron-left"></i> 浅谈Arrays.asList()
               </a>
             
           </div>
@@ -506,8 +502,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/25/LeetCode-162/" rel="prev" title="LeetCode-162-寻找峰值">
-                LeetCode-162-寻找峰值 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/25/LeetCode-251/" rel="prev" title="LeetCode-215-数组中第k个最大元素">
+                LeetCode-215-数组中第k个最大元素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -699,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浅谈Arrays-asList"><span class="nav-number">1.</span> <span class="nav-text">浅谈Arrays.asList()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．什么Arrays-asList-？"><span class="nav-number">1.1.</span> <span class="nav-text">１．什么Arrays.asList()？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．关于其使用的几个注意事项："><span class="nav-number">1.2.</span> <span class="nav-text">２．关于其使用的几个注意事项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-不支持集合的add和remove方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 不支持集合的add和remove方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-该方法不适用于基本数据类型数组"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 该方法不适用于基本数据类型数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-162-寻找峰值"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-162-寻找峰值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．题目："><span class="nav-number">1.1.</span> <span class="nav-text">１．题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．解题："><span class="nav-number">1.2.</span> <span class="nav-text">２．解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

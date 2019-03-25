@@ -97,7 +97,7 @@
 
 
   <meta name="description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
-<meta name="keywords" content="Java,学习,Arrays">
+<meta name="keywords" content="Arrays,Java,学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈Arrays.asList()">
 <meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/asList/index.html">
@@ -479,11 +479,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
+          
             <a href="/tags/Java/" rel="tag"># Java</a>
           
             <a href="/tags/学习/" rel="tag"># 学习</a>
-          
-            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
           
         </div>
       
@@ -596,10 +596,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -616,10 +612,6 @@
                     
                   
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -871,12 +863,10 @@
           if (results.length > 0) {
             var counter = results[0];
             
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.time + 1);
             
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
             
               .fail(function ({ responseJSON }) {
                 console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);

@@ -97,7 +97,7 @@
 
 
   <meta name="description" content="红黑树１．基本知识：1.1什么是红黑树？​    红黑树是一种近似平衡的二叉查找树，它能够确保任何一个节点的左右子树的高度差不会超过二者中较低那个的一陪． ​    和AVL树相比，AVL树是一棵严格的平衡树（它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1），它的所有子数都满足平衡二叉树的定义．因此，AVL树的查找效率很高，但是插入，删除旋转次数比红黑树多． 1.2红黑树的性质：​">
-<meta name="keywords" content="Java,数据结构,学习">
+<meta name="keywords" content="Java,学习,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="红黑树(RBT)">
 <meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/rbt/index.html">
@@ -536,9 +536,9 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
-          
             <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -651,10 +651,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -671,10 +667,6 @@
                     
                   
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -926,12 +918,10 @@
           if (results.length > 0) {
             var counter = results[0];
             
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.time + 1);
             
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
             
               .fail(function ({ responseJSON }) {
                 console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);

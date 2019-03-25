@@ -97,7 +97,7 @@
 
 
   <meta name="description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
-<meta name="keywords" content="Arrays,Java,学习">
+<meta name="keywords" content="Java,Arrays,学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈Arrays.asList()">
 <meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/asList/index.html">
@@ -479,9 +479,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
-          
             <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
           
             <a href="/tags/学习/" rel="tag"># 学习</a>
           
@@ -887,9 +887,14 @@
               })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
             
           }
         })

@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
-<meta name="keywords" content="Java,Arrays,学习">
+  <meta name="description" content="LeetCode-002-两数相加１．题目：两数相加 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。 示例： 123输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt;">
+<meta name="keywords" content="链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈Arrays.asList()">
-<meta property="og:url" content="https://duanjiateng.github.io/2019/03/25/asList/index.html">
+<meta property="og:title" content="LeetCode-002">
+<meta property="og:url" content="https://duanjiateng.github.io/2019/03/27/LeetCode-002/index.html">
 <meta property="og:site_name" content="Djt&#39;s Blog">
-<meta property="og:description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
+<meta property="og:description" content="LeetCode-002-两数相加１．题目：两数相加 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。 示例： 123输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-25T02:04:03.327Z">
+<meta property="og:updated_time" content="2019-03-27T06:14:36.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈Arrays.asList()">
-<meta name="twitter:description" content="浅谈Arrays.asList()１．什么Arrays.asList()？asList()是Arrays类中一个静态方法，主要作用是：将数组转换为list，也就是数组和集合连接在一起。 ２．关于其使用的几个注意事项：​    使用该方法时会有几大“坑”，同学们一定要注意。 2.1 不支持集合的add和remove方法​    使用工具类Arrays.asList()把数组转换成集合时，不能使用其修">
+<meta name="twitter:title" content="LeetCode-002">
+<meta name="twitter:description" content="LeetCode-002-两数相加１．题目：两数相加 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。 示例： 123输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt;">
 
 
 
 
 
 
-  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/25/asList/">
+  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/27/LeetCode-002/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>浅谈Arrays.asList() | Djt's Blog</title>
+  <title>LeetCode-002 | Djt's Blog</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/25/asList/">
+    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/27/LeetCode-002/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Djt">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈Arrays.asList()
+          <h1 class="post-title" itemprop="name headline">LeetCode-002
 
               
             
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2019-03-25 10:01:51 / Modified: 10:04:03" itemprop="dateCreated datePublished" datetime="2019-03-25T10:01:51+08:00">2019-03-25</time>
+              <time title="Created: 2019-03-27 14:13:11 / Modified: 14:14:36" itemprop="dateCreated datePublished" datetime="2019-03-27T14:13:11+08:00">2019-03-27</time>
             
 
             
@@ -388,14 +388,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/集合类/" itemprop="url" rel="index"><span itemprop="name">集合类</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -410,7 +403,7 @@
 
           
           
-            <span id="/2019/03/25/asList/" class="leancloud_visitors" data-flag-title="浅谈Arrays.asList()">
+            <span id="/2019/03/27/LeetCode-002/" class="leancloud_visitors" data-flag-title="LeetCode-002">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -441,21 +434,23 @@
       
 
       
-        <h2 id="浅谈Arrays-asList"><a href="#浅谈Arrays-asList" class="headerlink" title="浅谈Arrays.asList()"></a>浅谈Arrays.asList()</h2><h3 id="１．什么Arrays-asList-？"><a href="#１．什么Arrays-asList-？" class="headerlink" title="１．什么Arrays.asList()？"></a>１．什么Arrays.asList()？</h3><p><code>asList()</code>是<code>Arrays</code>类中一个静态方法，主要作用是：将数组转换为<code>list</code>，也就是数组和集合连接在一起。</p>
-<h3 id="２．关于其使用的几个注意事项："><a href="#２．关于其使用的几个注意事项：" class="headerlink" title="２．关于其使用的几个注意事项："></a>２．关于其使用的几个注意事项：</h3><p>​    使用该方法时会有几大“坑”，同学们一定要注意。</p>
-<h4 id="2-1-不支持集合的add和remove方法"><a href="#2-1-不支持集合的add和remove方法" class="headerlink" title="2.1 不支持集合的add和remove方法"></a>2.1 不支持集合的<code>add</code>和<code>remove</code>方法</h4><p>​    使用工具类<code>Arrays.asList()</code>把数组转换成集合时，不能使用其修改集合相关的方法，它的<code>add/remove/clear</code>方法会抛出<code>UnsupportOperationException</code>异常。</p>
-<p>​    因为从源码分析，<code>asList</code>的返回对象是一个<code>Arrays</code>的内部类<code>ArrayList</code>，并没有实现集合的修改方法。</p>
-<p>​    源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Arrays</span> </span>&#123;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">asList</span><span class="params">(T... a)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Arrays.ArrayList(a);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">RandomAccess</span>, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//...</span></span><br><span class="line">    	ArrayList(E[] array) &#123;</span><br><span class="line">        	<span class="keyword">this</span>.a = (Object[])Objects.requireNonNull(array)</span><br><span class="line">    	&#125;</span><br><span class="line">  		<span class="comment">//...</span></span><br><span class="line">    &#125; </span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    因此，在使用其方法时，必须确保其长度不再改变。</p>
-<h4 id="2-2-该方法不适用于基本数据类型数组"><a href="#2-2-该方法不适用于基本数据类型数组" class="headerlink" title="2.2 该方法不适用于基本数据类型数组"></a>2.2 该方法不适用于基本数据类型数组</h4><p>​    先给大家做个演示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsListDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] nums = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">        List list = Arrays.asList(nums);</span><br><span class="line">        System.out.println(<span class="string">"list's size = "</span> + list.size());</span><br><span class="line">        <span class="comment">//结果：list's size = 1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    我们发现和我们想的并不一样，我们认为<code>list</code>的大小应该为３，现在却是１。这是因为，在<code>Arrays.asList</code>中，该方法接受一个变长参数，一般可看做数组参数，但是因为<code>int[]</code>本身就是一个类型，所以<code>nums</code>变量作为参数传递时，编译器认为只传了一个变量，这个变量的类型是<code>int[]</code>，所以<code>size</code>为1。</p>
-<p>​    基本类型是不能作为泛型的参数，按道理应该使用包装类型，但这里缺没有报错，因为数组是可以泛型化的，所以转换后在list中就有一个类型为int的数组。</p>
-<h4 id="2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"><a href="#2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。" class="headerlink" title="2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"></a>2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。</h4><p>​    注意:仅仅针对对象数组类型,基本数据类型数组不具备该特性 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsListDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String[] str = &#123;<span class="string">"Hello"</span>, <span class="string">"i'm"</span>, <span class="string">"Djt"</span>&#125;;</span><br><span class="line">        List&lt;String&gt; slist = Arrays.asList(str);</span><br><span class="line">        System.out.println(<span class="string">"str[2] = "</span> + str[<span class="number">2</span>]);</span><br><span class="line">    	<span class="comment">// 结果 : str[2] = Djt</span></span><br><span class="line">        slist.set(<span class="number">2</span>, <span class="string">"djt"</span>);</span><br><span class="line">        System.out.println(<span class="string">"str[2] = "</span> + str[<span class="number">2</span>]);</span><br><span class="line">    	<span class="comment">// 结果 : str[2] = djt</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    我们发现对<code>slist</code>进行修改，<code>str</code>中也发生了修改。Arrays.asList体现的是适配器模式，只是转换接口，后台的数据仍是数组。<code>slist</code>和<code>str</code>都是引用，他们指向的是同一个数组，指向同一个存储空间。</p>
-<p>​    <strong>如果要使用真正的<code>ArrayList</code>，用 ArrayList 的构造器可以将其转变成真正的 ArrayList。</strong></p>
+        <h2 id="LeetCode-002-两数相加"><a href="#LeetCode-002-两数相加" class="headerlink" title="LeetCode-002-两数相加"></a>LeetCode-002-两数相加</h2><h3 id="１．题目："><a href="#１．题目：" class="headerlink" title="１．题目："></a>１．题目：</h3><p>两数相加</p>
+<p>给出两个 <strong>非空</strong> 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 <strong>逆序</strong> 的方式存储的，并且它们的每个节点只能存储 <strong>一位</strong> 数字。</p>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">输出：7 -&gt; 0 -&gt; 8</span><br><span class="line">原因：342 + 465 = 807</span><br></pre></td></tr></table></figure>
+<h3 id="２．解题："><a href="#２．解题：" class="headerlink" title="２．解题："></a>２．解题：</h3><p>​    这个题大致思路很简单，就是将两个链表每个节点取出来相加作为一个新的节点，同时需要考虑进位的问题。节点相加大致有这三种情况：</p>
+<ul>
+<li><p><code>l1</code>和<code>l2</code>都有节点；</p>
+</li>
+<li><p><code>l1</code>有节点，<code>l2</code>为<code>null</code>；或者<code>l1</code>有节点，<code>l2</code>为<code>null</code>。</p>
+</li>
+<li><p><code>l1</code>和<code>l2</code>都没有节点，但是有进位。</p>
+<p>因此我们为了方便处理，如果一个链表没有节点时，就给该链表一个<code>0</code>节点。</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//进位</span></span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//head头结点</span></span><br><span class="line">        ListNode head = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//tmp临时结点</span></span><br><span class="line">        ListNode tmp = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//两链表长度不一致时，将短链表用０结点补全</span></span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> num = carry + (l1 == <span class="keyword">null</span> ? <span class="number">0</span> : l1.val) + ( l2 == <span class="keyword">null</span> ? <span class="number">0</span> : l2.val);</span><br><span class="line">            ListNode node  = <span class="keyword">new</span> ListNode(num % <span class="number">10</span>);</span><br><span class="line">            carry = num / <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (tmp == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="comment">//第一次相加</span></span><br><span class="line">                tmp = node;</span><br><span class="line">                head = tmp;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                tmp.next = node;</span><br><span class="line">                tmp = tmp.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            l1 = (l1 == <span class="keyword">null</span> ? <span class="keyword">null</span> : l1.next);</span><br><span class="line">            l2 = (l2 == <span class="keyword">null</span> ? <span class="keyword">null</span> : l2.next);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -479,11 +474,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-            <a href="/tags/Arrays/" rel="tag"># Arrays</a>
-          
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/链表/" rel="tag"># 链表</a>
           
         </div>
       
@@ -496,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/25/rbt/" rel="next" title="红黑树(RBT)">
-                <i class="fa fa-chevron-left"></i> 红黑树(RBT)
+              <a href="/2019/03/27/LeetCode-056/" rel="next" title="LeetCode-056-合并区间">
+                <i class="fa fa-chevron-left"></i> LeetCode-056-合并区间
               </a>
             
           </div>
@@ -505,10 +496,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/25/LeetCode-162/" rel="prev" title="LeetCode-162-寻找峰值">
-                LeetCode-162-寻找峰值 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -707,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浅谈Arrays-asList"><span class="nav-number">1.</span> <span class="nav-text">浅谈Arrays.asList()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．什么Arrays-asList-？"><span class="nav-number">1.1.</span> <span class="nav-text">１．什么Arrays.asList()？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．关于其使用的几个注意事项："><span class="nav-number">1.2.</span> <span class="nav-text">２．关于其使用的几个注意事项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-不支持集合的add和remove方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 不支持集合的add和remove方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-该方法不适用于基本数据类型数组"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 该方法不适用于基本数据类型数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 该方法连接起来的数组和集合，只要修改其中一个，另一个也被修改。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-002-两数相加"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-002-两数相加</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．题目："><span class="nav-number">1.1.</span> <span class="nav-text">１．题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．解题："><span class="nav-number">1.2.</span> <span class="nav-text">２．解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置１．题目：在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回 [-1, -1]。 示例 1: 12输入: nums = [5,7,7,8,8,">
-<meta name="keywords" content="二分法">
+  <meta name="description" content="LeetCode-055-跳跃游戏1. 题目：跳跃游戏 给定一个非负整数数组，你最初位于数组的第一个位置。 数组中的每个元素代表你在该位置可以跳跃的最大长度。 判断你是否能够到达最后一个位置。 示例 1: 123输入: [2,3,1,1,4]输出: true解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。 示例 2: 123输入: [3,2,1,0,4]输出: false">
+<meta name="keywords" content="贪心算法,动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置">
-<meta property="og:url" content="https://duanjiateng.github.io/2019/03/26/LeetCode-034/index.html">
+<meta property="og:title" content="LeetCode-055-跳跃游戏">
+<meta property="og:url" content="https://duanjiateng.github.io/2019/03/30/LeetCode-055/index.html">
 <meta property="og:site_name" content="Djt&#39;s Blog">
-<meta property="og:description" content="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置１．题目：在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回 [-1, -1]。 示例 1: 12输入: nums = [5,7,7,8,8,">
+<meta property="og:description" content="LeetCode-055-跳跃游戏1. 题目：跳跃游戏 给定一个非负整数数组，你最初位于数组的第一个位置。 数组中的每个元素代表你在该位置可以跳跃的最大长度。 判断你是否能够到达最后一个位置。 示例 1: 123输入: [2,3,1,1,4]输出: true解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。 示例 2: 123输入: [3,2,1,0,4]输出: false">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-26T06:55:34.883Z">
+<meta property="og:updated_time" content="2019-03-30T15:39:25.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置">
-<meta name="twitter:description" content="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置１．题目：在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回 [-1, -1]。 示例 1: 12输入: nums = [5,7,7,8,8,">
+<meta name="twitter:title" content="LeetCode-055-跳跃游戏">
+<meta name="twitter:description" content="LeetCode-055-跳跃游戏1. 题目：跳跃游戏 给定一个非负整数数组，你最初位于数组的第一个位置。 数组中的每个元素代表你在该位置可以跳跃的最大长度。 判断你是否能够到达最后一个位置。 示例 1: 123输入: [2,3,1,1,4]输出: true解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。 示例 2: 123输入: [3,2,1,0,4]输出: false">
 
 
 
 
 
 
-  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/26/LeetCode-034/">
+  <link rel="canonical" href="https://duanjiateng.github.io/2019/03/30/LeetCode-055/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>LeetCode-034-在排序数组中查找元素的第一个和最后一个位置 | Djt's Blog</title>
+  <title>LeetCode-055-跳跃游戏 | Djt's Blog</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/26/LeetCode-034/">
+    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/03/30/LeetCode-055/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Djt">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode-034-在排序数组中查找元素的第一个和最后一个位置
+          <h1 class="post-title" itemprop="name headline">LeetCode-055-跳跃游戏
 
               
             
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2019-03-26 14:53:31 / Modified: 14:55:34" itemprop="dateCreated datePublished" datetime="2019-03-26T14:53:31+08:00">2019-03-26</time>
+              <time title="Created: 2019-03-30 23:38:23 / Modified: 23:39:25" itemprop="dateCreated datePublished" datetime="2019-03-30T23:38:23+08:00">2019-03-30</time>
             
 
             
@@ -403,7 +403,7 @@
 
           
           
-            <span id="/2019/03/26/LeetCode-034/" class="leancloud_visitors" data-flag-title="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置">
+            <span id="/2019/03/30/LeetCode-055/" class="leancloud_visitors" data-flag-title="LeetCode-055-跳跃游戏">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -434,19 +434,18 @@
       
 
       
-        <h2 id="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置"><a href="#LeetCode-034-在排序数组中查找元素的第一个和最后一个位置" class="headerlink" title="LeetCode-034-在排序数组中查找元素的第一个和最后一个位置"></a>LeetCode-034-在排序数组中查找元素的第一个和最后一个位置</h2><h3 id="１．题目："><a href="#１．题目：" class="headerlink" title="１．题目："></a>１．题目：</h3><p>在排序数组中查找元素的第一个和最后一个位置</p>
-<p>给定一个按照升序排列的整数数组 <code>nums</code>，和一个目标值 <code>target</code>。找出给定目标值在数组中的开始位置和结束位置。</p>
-<p>你的算法时间复杂度必须是 <em>O</em>(log <em>n</em>) 级别。</p>
-<p>如果数组中不存在目标值，返回 <code>[-1, -1]</code>。</p>
+        <h2 id="LeetCode-055-跳跃游戏"><a href="#LeetCode-055-跳跃游戏" class="headerlink" title="LeetCode-055-跳跃游戏"></a>LeetCode-055-跳跃游戏</h2><h3 id="1-题目："><a href="#1-题目：" class="headerlink" title="1. 题目："></a>1. 题目：</h3><p>跳跃游戏</p>
+<p>给定一个非负整数数组，你最初位于数组的第一个位置。</p>
+<p>数组中的每个元素代表你在该位置可以跳跃的最大长度。</p>
+<p>判断你是否能够到达最后一个位置。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [5,7,7,8,8,10], target = 8</span><br><span class="line">输出: [3,4]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,3,1,1,4]</span><br><span class="line">输出: true</span><br><span class="line">解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [5,7,7,8,8,10], target = 6</span><br><span class="line">输出: [-1,-1]</span><br></pre></td></tr></table></figure>
-<h3 id="２．解题："><a href="#２．解题：" class="headerlink" title="２．解题："></a>２．解题：</h3><p>​    这是一个排好序的数组，我们只需要查找数组中是否存在<code>target</code>，如果存在返回该元素的第一个位置和最后一个位置。</p>
-<p>​    查找很简单，我们使用二分查找，时间复杂度<code>O(log n)</code>。</p>
-<p>​    我们得到索引后分别找到其第一个位置和最后一个位置的索引。</p>
-<p>​    需要注意边界问题（<code>index = 0</code>和<code>index = nums.length-1</code>）.</p>
-<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] searchRange(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="comment">//result[0]记录开始位置，result[1]记录结束位置</span></span><br><span class="line">        <span class="keyword">int</span> index = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> high = nums.length - <span class="number">1</span>;</span><br><span class="line">		<span class="comment">//二分法查找targrt是否在数组中</span></span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] == target) &#123;</span><br><span class="line">                index = mid;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">                low = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                high = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">//target不在数组中</span></span><br><span class="line">        <span class="keyword">if</span> (index == -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start = index;</span><br><span class="line">        <span class="keyword">int</span> end = index;</span><br><span class="line">        <span class="comment">//寻找target的第一个位置</span></span><br><span class="line">    	<span class="keyword">while</span> (start &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[start] == nums[start - <span class="number">1</span>]) &#123;</span><br><span class="line">                start--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//寻找targrt的最后一个位置</span></span><br><span class="line">        <span class="keyword">while</span> (end &lt; nums.length - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[end] == nums[end + <span class="number">1</span>]) &#123;</span><br><span class="line">                end++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;start, end&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,1,0,4]</span><br><span class="line">输出: false</span><br><span class="line">解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。</span><br></pre></td></tr></table></figure>
+<h3 id="2-解题："><a href="#2-解题：" class="headerlink" title="2. 解题："></a>2. 解题：</h3><p>​    使用贪心算法，使用<code>max</code>来记录能够跳跃的最远距离<code>max{max, i + nums[i]}</code>。</p>
+<p>​    当<code>max &gt;= nums.length</code>是说明可以到达末尾；</p>
+<p>​    当<code>i &gt; max</code>说明到不了当前位置，则返回<code>false</code>。</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; max) </span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            max = (max &gt; (nums[i] + i)) ? max : nums[i] + i;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (max &gt;= nums.length)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -470,7 +469,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二分法/" rel="tag"># 二分法</a>
+            <a href="/tags/贪心算法/" rel="tag"># 贪心算法</a>
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
           
         </div>
       
@@ -483,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/25/LeetCode-251/" rel="next" title="LeetCode-215-数组中第k个最大元素">
-                <i class="fa fa-chevron-left"></i> LeetCode-215-数组中第k个最大元素
+              <a href="/2019/03/29/LeetCode-160/" rel="next" title="LeetCode-160-相交链表">
+                <i class="fa fa-chevron-left"></i> LeetCode-160-相交链表
               </a>
             
           </div>
@@ -492,10 +493,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/27/LeetCode-334/" rel="prev" title="LeetCode-334-递增的三元子序列">
-                LeetCode-334-递增的三元子序列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -712,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-034-在排序数组中查找元素的第一个和最后一个位置"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-034-在排序数组中查找元素的第一个和最后一个位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．题目："><span class="nav-number">1.1.</span> <span class="nav-text">１．题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．解题："><span class="nav-number">1.2.</span> <span class="nav-text">２．解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-055-跳跃游戏"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-055-跳跃游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目："><span class="nav-number">1.1.</span> <span class="nav-text">1. 题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题："><span class="nav-number">1.2.</span> <span class="nav-text">2. 解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

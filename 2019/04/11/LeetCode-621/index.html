@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Djt&#39;s Blog">
 <meta property="og:description" content="LeetCode-621-任务调度器1. 题目：Task Scheduler 给定一个用字符数组表示的 CPU 需要执行的任务列表。其中包含使用大写的 A - Z 字母表示的26 种不同种类的任务。任务可以以任意顺序执行，并且每个任务都可以在 1 个单位时间内执行完。CPU 在任何一个单位时间内都可以执行一个任务，或者在待命状态。 然而，两个相同种类的任务之间必须有长度为 n 的冷却时间，因此至少">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T07:44:20.420Z">
+<meta property="og:updated_time" content="2019-04-11T07:46:11.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode-621-任务调度器">
 <meta name="twitter:description" content="LeetCode-621-任务调度器1. 题目：Task Scheduler 给定一个用字符数组表示的 CPU 需要执行的任务列表。其中包含使用大写的 A - Z 字母表示的26 种不同种类的任务。任务可以以任意顺序执行，并且每个任务都可以在 1 个单位时间内执行完。CPU 在任何一个单位时间内都可以执行一个任务，或者在待命状态。 然而，两个相同种类的任务之间必须有长度为 n 的冷却时间，因此至少">
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2019-04-11 15:43:14 / Modified: 15:44:20" itemprop="dateCreated datePublished" datetime="2019-04-11T15:43:14+08:00">2019-04-11</time>
+              <time title="Created: 2019-04-11 15:43:14 / Modified: 15:46:11" itemprop="dateCreated datePublished" datetime="2019-04-11T15:43:14+08:00">2019-04-11</time>
             
 
             
@@ -940,9 +940,14 @@
               })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
             
           }
         })

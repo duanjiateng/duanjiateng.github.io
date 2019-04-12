@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="Hello World!">
+  <meta name="description" content="LeetCode-371-两整数之和1. 题目： 两整数之和 不使用运算符 + 和 - ，计算两整数 a 、b 之和。 示例 1: 12输入: a = 1, b = 2输出: 3 示例 2: 12输入: a = -2, b = 3输出: 1 2. 解题：使用二进制加法，也就是位运算。二进制加法有四种组合：1 + 1 = 10, 1 + 0 =1, 0 + 1 = 1, 0 + 0 = 0，我们发现">
+<meta name="keywords" content="和运算,二进制位运算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-371">
+<meta property="og:title" content="LeetCode-371-两整数之和">
 <meta property="og:url" content="https://duanjiateng.github.io/2019/04/10/LeetCode-371/index.html">
 <meta property="og:site_name" content="Djt&#39;s Blog">
-<meta property="og:description" content="Hello World!">
+<meta property="og:description" content="LeetCode-371-两整数之和1. 题目： 两整数之和 不使用运算符 + 和 - ，计算两整数 a 、b 之和。 示例 1: 12输入: a = 1, b = 2输出: 3 示例 2: 12输入: a = -2, b = 3输出: 1 2. 解题：使用二进制加法，也就是位运算。二进制加法有四种组合：1 + 1 = 10, 1 + 0 =1, 0 + 1 = 1, 0 + 0 = 0，我们发现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-10T03:11:18.853Z">
+<meta property="og:updated_time" content="2019-04-12T13:57:23.820Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-371">
-<meta name="twitter:description" content="Hello World!">
+<meta name="twitter:title" content="LeetCode-371-两整数之和">
+<meta name="twitter:description" content="LeetCode-371-两整数之和1. 题目： 两整数之和 不使用运算符 + 和 - ，计算两整数 a 、b 之和。 示例 1: 12输入: a = 1, b = 2输出: 3 示例 2: 12输入: a = -2, b = 3输出: 1 2. 解题：使用二进制加法，也就是位运算。二进制加法有四种组合：1 + 1 = 10, 1 + 0 =1, 0 + 1 = 1, 0 + 0 = 0，我们发现">
 
 
 
@@ -123,7 +124,7 @@
   };
 </script>
 
-  <title>LeetCode-371 | Djt's Blog</title>
+  <title>LeetCode-371-两整数之和 | Djt's Blog</title>
   
 
 
@@ -339,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode-371
+          <h1 class="post-title" itemprop="name headline">LeetCode-371-两整数之和
 
               
             
@@ -369,9 +370,43 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 21:57:23" itemprop="dateModified" datetime="2019-04-12T21:57:23+08:00">2019-04-12</time>
+              
+            
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -380,7 +415,7 @@
 
           
           
-            <span id="/2019/04/10/LeetCode-371/" class="leancloud_visitors" data-flag-title="LeetCode-371">
+            <span id="/2019/04/10/LeetCode-371/" class="leancloud_visitors" data-flag-title="LeetCode-371-两整数之和">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -411,7 +446,19 @@
       
 
       
-        
+        <h2 id="LeetCode-371-两整数之和"><a href="#LeetCode-371-两整数之和" class="headerlink" title="LeetCode-371-两整数之和"></a>LeetCode-371-两整数之和</h2><h3 id="1-题目："><a href="#1-题目：" class="headerlink" title="1. 题目："></a>1. 题目：</h3><p> 两整数之和</p>
+<p><strong>不使用</strong>运算符 <code>+</code> 和 <code>-</code> ，计算两整数 <code>a</code> 、<code>b</code> 之和。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: a = 1, b = 2</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: a = -2, b = 3</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
+<h3 id="2-解题："><a href="#2-解题：" class="headerlink" title="2. 解题："></a>2. 解题：</h3><p>使用二进制加法，也就是位运算。二进制加法有四种组合：<code>1 + 1 = 10, 1 + 0 =1, 0 + 1 = 1, 0 + 0 = 0</code>，我们发现只有一种情况是需要进位的，而且是都为<code>1</code>时。</p>
+<p>我们使用<code>&amp;</code>运算来找出发生进位的位，并且将结果左移一位就可以得到进位<code>carry</code>。</p>
+<p>我们使用<code>^</code>异或运算来找出不发生进位保留下的位<code>sum</code>。</p>
+<p>将<code>sum</code>和<code>carry</code>“相加”。</p>
+<p>我们会发现依然可能会出现“进位现象”，因此递归调用<code>getSum()</code>，直到<code>carry = 0</code>时返回<code>sum</code>。</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (b == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> carry = (a &amp; b) &lt;&lt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = a ^ b;</span><br><span class="line">        <span class="keyword">return</span> getSum(sum, carry);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -431,6 +478,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/和运算/" rel="tag"># 和运算</a>
+          
+            <a href="/tags/二进制位运算/" rel="tag"># 二进制位运算</a>
+          
+        </div>
       
 
       
@@ -497,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -635,7 +699,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">40</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -688,6 +756,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-371-两整数之和"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-371-两整数之和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目："><span class="nav-number">1.1.</span> <span class="nav-text">1. 题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题："><span class="nav-number">1.2.</span> <span class="nav-text">2. 解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="LeetCode-079-WordSearch１．题目：单词搜索 给定一个二维网格和一个单词，找出该单词是否存在于网格中。 单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。 示例: 12345678910board =[  [&amp;apos;A&amp;apos;,&amp;apos;B&amp;apos;,&amp;apos;C&amp;apos">
-<meta name="keywords" content="回溯算法">
+  <meta name="description" content="LeetCode-026-从排序数组中删除重复项1. 题目：从排序数组中删除重复项 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。 示例 1: 12345给定数组 nums = [1,1,2], 函数应该返回新的长度 2, 并且原数组 nums 的前两个元">
+<meta name="keywords" content="双指针,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-079-WordSearch">
-<meta property="og:url" content="https://duanjiateng.github.io/2019/04/16/LeetCode-079/index.html">
+<meta property="og:title" content="LeetCode-026-从排序数组中删除重复项">
+<meta property="og:url" content="https://duanjiateng.github.io/2019/04/17/LeetCode-026/index.html">
 <meta property="og:site_name" content="Djt&#39;s Blog">
-<meta property="og:description" content="LeetCode-079-WordSearch１．题目：单词搜索 给定一个二维网格和一个单词，找出该单词是否存在于网格中。 单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。 示例: 12345678910board =[  [&amp;apos;A&amp;apos;,&amp;apos;B&amp;apos;,&amp;apos;C&amp;apos">
+<meta property="og:description" content="LeetCode-026-从排序数组中删除重复项1. 题目：从排序数组中删除重复项 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。 示例 1: 12345给定数组 nums = [1,1,2], 函数应该返回新的长度 2, 并且原数组 nums 的前两个元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T06:45:37.313Z">
+<meta property="og:updated_time" content="2019-04-17T03:47:10.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-079-WordSearch">
-<meta name="twitter:description" content="LeetCode-079-WordSearch１．题目：单词搜索 给定一个二维网格和一个单词，找出该单词是否存在于网格中。 单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。 示例: 12345678910board =[  [&amp;apos;A&amp;apos;,&amp;apos;B&amp;apos;,&amp;apos;C&amp;apos">
+<meta name="twitter:title" content="LeetCode-026-从排序数组中删除重复项">
+<meta name="twitter:description" content="LeetCode-026-从排序数组中删除重复项1. 题目：从排序数组中删除重复项 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。 示例 1: 12345给定数组 nums = [1,1,2], 函数应该返回新的长度 2, 并且原数组 nums 的前两个元">
 
 
 
 
 
 
-  <link rel="canonical" href="https://duanjiateng.github.io/2019/04/16/LeetCode-079/">
+  <link rel="canonical" href="https://duanjiateng.github.io/2019/04/17/LeetCode-026/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>LeetCode-079-WordSearch | Djt's Blog</title>
+  <title>LeetCode-026-从排序数组中删除重复项 | Djt's Blog</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/04/16/LeetCode-079/">
+    <link itemprop="mainEntityOfPage" href="https://duanjiateng.github.io/2019/04/17/LeetCode-026/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Djt">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode-079-WordSearch
+          <h1 class="post-title" itemprop="name headline">LeetCode-026-从排序数组中删除重复项
 
               
             
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2019-04-16 14:44:30 / Modified: 14:45:37" itemprop="dateCreated datePublished" datetime="2019-04-16T14:44:30+08:00">2019-04-16</time>
+              <time title="Created: 2019-04-17 11:43:19 / Modified: 11:47:10" itemprop="dateCreated datePublished" datetime="2019-04-17T11:43:19+08:00">2019-04-17</time>
             
 
             
@@ -403,7 +403,7 @@
 
           
           
-            <span id="/2019/04/16/LeetCode-079/" class="leancloud_visitors" data-flag-title="LeetCode-079-WordSearch">
+            <span id="/2019/04/17/LeetCode-026/" class="leancloud_visitors" data-flag-title="LeetCode-026-从排序数组中删除重复项">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -434,15 +434,23 @@
       
 
       
-        <h2 id="LeetCode-079-WordSearch"><a href="#LeetCode-079-WordSearch" class="headerlink" title="LeetCode-079-WordSearch"></a>LeetCode-079-WordSearch</h2><h3 id="１．题目："><a href="#１．题目：" class="headerlink" title="１．题目："></a>１．题目：</h3><p>单词搜索</p>
-<p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
-<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">board =</span><br><span class="line">[</span><br><span class="line">  [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;E&apos;],</span><br><span class="line">  [&apos;S&apos;,&apos;F&apos;,&apos;C&apos;,&apos;S&apos;],</span><br><span class="line">  [&apos;A&apos;,&apos;D&apos;,&apos;E&apos;,&apos;E&apos;]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">给定 word = &quot;ABCCED&quot;, 返回 true.</span><br><span class="line">给定 word = &quot;SEE&quot;, 返回 true.</span><br><span class="line">给定 word = &quot;ABCB&quot;, 返回 false.</span><br></pre></td></tr></table></figure>
-<h3 id="２．解题："><a href="#２．解题：" class="headerlink" title="２．解题："></a>２．解题：</h3><p>​    首先这个类似于迷宫问题，当单词的第一个字母在<code>board</code>匹配后，判断其位置的上下左右（考虑边界）是否可以匹配单词的下一个字母．我们为了实现这个过程，需要使用DFS．</p>
-<p>​    由于同一个单元格内的字母不允许重复使用，因此我们需要使用额外的空间来记录被访问过的单元格．</p>
-<p>​    现在我们来考虑递归退出条件．退出的情况无非两种：成功退出，当我们找到单词所有的字母时表示我们成功找到，此时使用一个计数器<code>count</code>用来表示成功匹配的字母数，满足<code>count == word.length()</code>；另一种情况就是找完所有情况不满足匹配，自动退出．</p>
-<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (board == <span class="keyword">null</span> || (board.length == <span class="number">0</span> &amp;&amp; board[<span class="number">0</span>].length == <span class="number">0</span>))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> row = board.length;</span><br><span class="line">        <span class="keyword">int</span> col = board[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">boolean</span>[][] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[row][col];</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; col; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (wordDFS(board, visited, <span class="number">0</span>, i, j, word)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">wordDFS</span><span class="params">(<span class="keyword">char</span>[][] board, <span class="keyword">boolean</span>[][] visited, <span class="keyword">int</span> count, <span class="keyword">int</span> row, <span class="keyword">int</span> col, String word)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//退出条件</span></span><br><span class="line">        <span class="keyword">if</span> (count == word.length()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断边界</span></span><br><span class="line">        <span class="keyword">if</span> (row &lt; <span class="number">0</span> || col &lt; <span class="number">0</span> || row &gt;= board.length || col &gt;= board[<span class="number">0</span>].length) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//需要匹配的字符</span></span><br><span class="line">        <span class="keyword">char</span> ch = word.charAt(count);</span><br><span class="line">        <span class="keyword">if</span> (!visited[row][col] &amp;&amp; ch == board[row][col]) &#123;</span><br><span class="line">            visited[row][col] = <span class="keyword">true</span>;</span><br><span class="line">            <span class="comment">//判断下一个能否找见</span></span><br><span class="line">            <span class="keyword">boolean</span> next = (wordDFS(board, visited, count+<span class="number">1</span>, row + <span class="number">1</span>, col, word) ||</span><br><span class="line">                            wordDFS(board, visited, count+<span class="number">1</span>, row - <span class="number">1</span>, col, word) ||</span><br><span class="line">                            wordDFS(board, visited, count+<span class="number">1</span>, row, col + <span class="number">1</span>, word) ||</span><br><span class="line">                            wordDFS(board, visited, count+<span class="number">1</span>, row, col - <span class="number">1</span>, word));</span><br><span class="line">            visited[row][col] = <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="LeetCode-026-从排序数组中删除重复项"><a href="#LeetCode-026-从排序数组中删除重复项" class="headerlink" title="LeetCode-026-从排序数组中删除重复项"></a>LeetCode-026-从排序数组中删除重复项</h2><h3 id="1-题目："><a href="#1-题目：" class="headerlink" title="1. 题目："></a>1. 题目：</h3><p>从排序数组中删除重复项</p>
+<p>给定一个排序数组，你需要在<strong>原地</strong>删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在<strong>原地修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以<strong>“引用”</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-解题："><a href="#2-解题：" class="headerlink" title="2. 解题："></a>2. 解题：</h3><p>使用双指针。一个慢指针<code>res</code>用来记录不同元素，一个快指针<code>i</code>用来遍历整个数组。</p>
+<p><code>res</code>初始化为<code>0</code>,<code>i</code>初始化为<code>1</code>;</p>
+<p>当<code>nums[res] != nums[i]</code>时，<code>res++</code>说明增加一个不同的元素，再将<code>nums[i]</code>赋给<code>nums[res]</code>；</p>
+<p>当<code>nums[res] == nums[i]</code>时，增加<code>i</code>来跳过重复项。</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != nums[res]) &#123;</span><br><span class="line">                res++;</span><br><span class="line">                nums[res] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,7 +474,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/回溯算法/" rel="tag"># 回溯算法</a>
+            <a href="/tags/双指针/" rel="tag"># 双指针</a>
+          
+            <a href="/tags/数组/" rel="tag"># 数组</a>
           
         </div>
       
@@ -479,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/16/LeetCode-078/" rel="next" title="LeetCode-078-Subsets">
-                <i class="fa fa-chevron-left"></i> LeetCode-078-Subsets
+              <a href="/2019/04/16/LeetCode-347/" rel="next" title="LeetCode-347-前K个高频元素">
+                <i class="fa fa-chevron-left"></i> LeetCode-347-前K个高频元素
               </a>
             
           </div>
@@ -488,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/16/LeetCode-075/" rel="prev" title="LeetCode-075-颜色分类">
-                LeetCode-075-颜色分类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -778,7 +784,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-079-WordSearch"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-079-WordSearch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#１．题目："><span class="nav-number">1.1.</span> <span class="nav-text">１．题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#２．解题："><span class="nav-number">1.2.</span> <span class="nav-text">２．解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-026-从排序数组中删除重复项"><span class="nav-number">1.</span> <span class="nav-text">LeetCode-026-从排序数组中删除重复项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目："><span class="nav-number">1.1.</span> <span class="nav-text">1. 题目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题："><span class="nav-number">1.2.</span> <span class="nav-text">2. 解题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码："><span class="nav-number">1.2.1.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

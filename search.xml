@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-066-加一]]></title>
+    <url>%2F2019%2F04%2F18%2FLeetCode-066%2F</url>
+    <content type="text"><![CDATA[1. 题目：加一 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。 最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。 你可以假设除了整数 0 之外，这个整数不会以零开头。 示例 1: 123输入: [1,2,3]输出: [1,2,4]解释: 输入数组表示数字 123。 示例 2: 123输入: [4,3,2,1]输出: [4,3,2,2]解释: 输入数组表示数字 4321。 2. 解题：这个题主要思路从数组的最后一个元素开始加一，然后看是否进位。 若进位，则给数组的前一个元素加一，判断是否进位，重复此动作； 若不进位，则加一完成。 需要注意：当出现9,99,999...这种情况时，需要重新创建一个数组，使其第一个元素为1. 代码：12345678910111213141516171819202122232425class Solution &#123; public int[] plusOne(int[] digits) &#123; int len = digits.length; int carry = 1; int i = len - 1; while(carry == 1 &amp;&amp; i &gt;= 0) &#123; int num = digits[i] + carry; carry = 0; if (num == 10) &#123; carry = 1; digits[i] = 0; i--; &#125; else &#123; digits[i] = num; &#125; &#125; if (carry == 1) &#123; int[len+1] res = new int[len+1]; res[0] = 1; return res; &#125; return digits; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-350-## 两个数组的交集 II]]></title>
+    <url>%2F2019%2F04%2F18%2FLeetCode-350%2F</url>
+    <content type="text"><![CDATA[1. 题目：两个数组的交集 II 给定两个数组，编写一个函数来计算它们的交集。 示例 1: 12输入: nums1 = [1,2,2,1], nums2 = [2,2]输出: [2,2] 示例 2: 12输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]输出: [4,9] 说明： 输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致。 我们可以不考虑输出结果的顺序。 进阶: 如果给定的数组已经排好序呢？你将如何优化你的算法？ 如果 nums1 的大小比 nums2 小很多，哪种方法更优？ 如果 nums2 的元素存储在磁盘上，磁盘内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？ 2. 解题：使用ArrayList来存放重复元素。 将两个数组排序，使用两个指针i、j来遍历两个数组，当其中一个数组遍历完时结束。 当nums1[i] == nums2[j]，将该元素加入到ArrayList，并且i++, j++； 当nums1[i] &lt; nums2[j]，i++； 当nums1[i] &gt; nums2[j]，j++。 最后再将ArrayList转换成int[]。 代码：1234567891011121314151617181920212223242526272829303132333435class Solution &#123; public int[] intersect(int[] nums1, int[] nums2) &#123; if (nums1 == null || nums2 == null) return null; List&lt;Integer&gt; list = new ArrayList&lt;&gt;(); int len1 = nums1.length; int len2 = nums2.length; int i = 0; int j = 0; Arrays.sort(nums1); Arrays.sort(nums2); while (i &lt; len1 &amp;&amp; j &lt; len2) &#123; if (nums1[i] == nums2[j]) &#123; list.add(nums1[i]); j++; i++; &#125; else if (nums1[i] &lt; nums2[j]) &#123; i++; &#125; else &#123; j++; &#125; &#125; int[] res = new int[list.size()]; for (int k = 0; k &lt; list.size(); k++) &#123; res[k] = list.get(k); &#125; return res; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-136-只出现一次的数字]]></title>
+    <url>%2F2019%2F04%2F18%2FLeetCode-136%2F</url>
+    <content type="text"><![CDATA[1. 题目：只出现一次的数字 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。 说明： 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？ 示例 1: 12输入: [2,2,1]输出: 1 示例 2: 12输入: [4,1,2,1,2]输出: 4 2. 解题：关键是只有一个元素出现一次，其余元素均出现两次。因此，我们可以使用位运算： 0 ^ num = num； n ^ num ^ num = n； 代码：12345678910class Solution &#123; public int singleNumber(int[] nums) &#123; int res = 0; for (int i = 0; i &lt; nums.length; i++) &#123; res ^= nums[i]; &#125; return res; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-217-存在重复]]></title>
     <url>%2F2019%2F04%2F17%2FLeetCode-217%2F</url>
     <content type="text"><![CDATA[1. 题目：给定一个整数数组，判断是否存在重复元素。 如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。 示例 1: 12输入: [1,2,3,1]输出: true 示例 2: 12输入: [1,2,3,4]输出: false 示例 3: 12输入: [1,1,1,3,3,4,3,2,4,2]输出: true 2. 解题：解法一：主要就是找有没有重复的元素，因此我们可以使用HashMap，将元素作为key，用来判断map中是否存在该元素，若存在则返回true，若不存在则将该元素加入map。 代码：1234567891011121314151617class Solution &#123; public boolean containsDuplicate(int[] nums) &#123; if (nums == null || nums.length == 0) return false; Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(); for (int i = 0; i &lt; nums.length; i++) &#123; if (map.containsKey(nums[i])) &#123; return true; &#125; map.put(nums[i], null); &#125; return false; &#125;&#125; 解法二：先排序，然后找相同的。将元素排列好，判断相邻两个元素是否相同。 代码：12345678910class Solution &#123; public boolean containsDuplicate(int[] nums) &#123; Arrays.sort(nums); for (int i = 0; i &lt; nums.length-1; i++) &#123; if (nums[i] == nums[i+1]) return true; &#125; return false; &#125;&#125;]]></content>

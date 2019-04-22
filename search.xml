@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-125-验证回文串]]></title>
+    <url>%2F2019%2F04%2F22%2FLeetCode-125%2F</url>
+    <content type="text"><![CDATA[1. 题目：验证回文字符串 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。 说明：本题中，我们将空字符串定义为有效的回文串。 示例 1: 12输入: &quot;A man, a plan, a canal: Panama&quot;输出: true 示例 2: 12输入: &quot;race a car&quot;输出: false 2. 解题：首先要对字符串进行处理： 大小写统一 除去多余字符，只保留数字和字母。 使用双指针，进行判断是否回文。 代码：1234567891011121314151617181920212223242526272829class Solution &#123; public boolean isPalindrome(String s) &#123; if (s == null) return true; StringBuilder str = new StringBuilder(); for (int i = 0; i &lt; s.length(); i++) &#123; char ch = s.charAt(i); if ( (ch &gt;= '0' &amp;&amp; ch &lt;= '9') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z')) &#123; str.append(ch); &#125; else if (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') &#123; ch = (char)(ch + 32); str.append(ch); &#125; &#125; char[] ch = str.toString().toCharArray(); int left = 0; int right = ch.length-1; while (left &lt; right) &#123; if (ch[left] != ch[right]) return false; left++; right--; &#125; return true; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>回文串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-242-有效的字母异位词]]></title>
+    <url>%2F2019%2F04%2F22%2FLeetCode-242%2F</url>
+    <content type="text"><![CDATA[1. 题目：有效的字母异位词 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true 示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false 说明:你可以假设字符串只包含小写字母。 进阶:如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？ 2. 解题：利用ASCLL码，将字符串转换成数组进行排序。 然后判断两个数组的每个元素是否相等即可。 代码：12345678910111213141516171819class Solution &#123; public boolean isAnagram(String s, String t) &#123; if (s.length() != t.length()) return false; char[] chS = s.toCharArray(); char[] chT = t.toCharArray(); Arrays.sort(chS); Arrays.sort(chT); for (int i = 0; i &lt; s.length(); i++) &#123; if (chS[i] != chT[i]) return false; &#125; return true; &#125;&#125; 3. 优化：利用一个额外空间char[26]，遍历第一个字符串，用数组记录每个字符的次数。 再遍历另一个字符串，对于出现的字符，数组中记录的次数减一。 最后遍历数组每一个元素是否为0. 代码：12345678910111213141516171819202122232425class Solution &#123; public boolean isAnagram(String s, String t) &#123; if (s.length() != t.length()) return false; int[] ch = new int[26]; for (int i = 0; i &lt; s.length(); i++) &#123; ch[s.charAt(i) - 'a']++; &#125; for (int i = 0; i &lt; t.length(); i++) &#123; ch[t.charAt(i) - 'a']--; &#125; for (int i = 0; i &lt; 26; i++) &#123; if (ch[i] != 0) return false; &#125; return true; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-387-字符串中的第一个唯一字符]]></title>
     <url>%2F2019%2F04%2F21%2FLeetCode-387%2F</url>
     <content type="text"><![CDATA[1. 题目：字符串中的第一个唯一字符 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。 案例: 12345s = &quot;leetcode&quot;返回 0.s = &quot;loveleetcode&quot;,返回 2. 注意事项：您可以假定该字符串只包含小写字母。 2. 解题：使用一个大小为26的数组来存字符第一次出现的索引。 如果重复出现则将数组对应的值置为-２． 然后将数组排序，找出最小的非-1和-2，就为结果。 代码：1234567891011121314151617181920212223class Solution &#123; public int firstUniqChar(String s) &#123; int[] chars = new int[26]; Arrays.fill(chars, -1); for (int i = 0; i &lt; s.length(); i++) &#123; char ch = s.charAt(i); if (chars[ch - 'a'] == -1 &amp;&amp; chars[ch - 'a'] != -2) &#123; chars[ch - 'a'] = i; &#125; else &#123; chars[ch - 'a'] = -2; &#125; &#125; Arrays.sort(chars); for (int i = 0; i &lt; 26; i++) &#123; if (chars[i] != -2 &amp;&amp; chars[i] != -1) return chars[i]; &#125; return -1; &#125;&#125; 3. 优化：利用indexOf和lastIndexOf. 代码：1234567891011121314151617class Solution &#123; public int firstUniqChar(String s) &#123; int result = -1; for(char c = 'a'; c &lt;= 'z'; c++ )&#123; // indexOf 返回此字符串中第一次出现处的索引 // lastIndexOf 返回指定字符在此字符串中最后一次出现处的索引 int idx = s.indexOf(c); // 第一次出现的索引id与最后一次出现的值相同，则满足题目要求 if(idx != -1 &amp;&amp; idx == s.lastIndexOf(c))&#123; result = (result == -1) ? idx : Math.min(result , idx); &#125; &#125; return result; &#125;&#125;]]></content>

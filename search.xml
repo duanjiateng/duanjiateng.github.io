@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-206-反转链表]]></title>
+    <url>%2F2019%2F04%2F25%2FLeetCode-206%2F</url>
+    <content type="text"><![CDATA[1. 题目：反转链表 反转一个单链表。 示例: 12输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL 进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 2. 解题：迭代解法：主要思路就是，遍历原链表，将链表的每一个节点取出，放入新链表的头结点之前，作为新的头结点。 代码：1234567891011121314151617181920212223/** * Definition for singly-linked list. * public class ListNode &#123; * int val; * ListNode next; * ListNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public ListNode reverseList(ListNode head) &#123; ListNode res = null; ListNode cur = head; while (cur != null) &#123; ListNode temp = cur.next; cur.next = res; res = cur; cur = temp; &#125; return res; &#125;&#125; 递归解法：递归版本稍微复杂一些，其关键在于反向工作。假设列表的其余部分已经被反转，现在我该如何反转它前面的部分？假设列表为：n(1) → … → n(k-1) → n(k) → n(k+1) → … → n(m) → null 若从节点 n(k+1) 到 n(m) 已经被反转，而我们正处于 n(k)。 n(1) → … → n(k-1) → n(k) → n(k+1) ← … ← n(m) 我们希望 n(k+1) 的下一个节点指向 n(k)。 所以， n(k).next.next = n(k); 要小心的是 n(1) 的下一个必须指向 null。如果你忽略了这一点，你的链表中可能会产生循环。如果使用大小为 2 的链表测试代码，则可能会捕获此错误。 代码：12345678public ListNode reverseList(ListNode head) &#123; if (head == null || head.next == null) return head; ListNode p = reverseList(head.next); head.next.next = head; head.next = null; return p;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-019-删除链表的倒数第N个节点]]></title>
+    <url>%2F2019%2F04%2F25%2FLeetCode-019%2F</url>
+    <content type="text"><![CDATA[1. 题目：删除链表的倒数第N个节点 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 123给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5. 说明： 给定的 n 保证是有效的。 进阶： 你能尝试使用一趟扫描实现吗？ 2. 解题：使用双指针right,left，进行一次遍历。 先让right指针走n步，然后让right和left同时出发，当right到达结尾时，left的下一个节点就是要删除节点。 需要注意，当删除的是头结点情况。 代码：123456789101112131415161718192021222324252627282930313233/** * Definition for singly-linked list. * public class ListNode &#123; * int val; * ListNode next; * ListNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public ListNode removeNthFromEnd(ListNode head, int n) &#123; ListNode right = head; ListNode left = head; //right先走n步 while (n-- &gt; 0) &#123; right = right.next; &#125; //删除头节点 if (right == null) return head.next; //找到需要删除节点的前一个节点 while (right.next != null) &#123; right = right.next; left = left.next; &#125; //删除节点 left.next = left.next.next; return head; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+        <tag>双指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-237-删除链表中的节点]]></title>
+    <url>%2F2019%2F04%2F25%2FLeetCode-237%2F</url>
+    <content type="text"><![CDATA[1. 题目：请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。 现有一个链表 – head = [4,5,1,9]，它可以表示为: 示例 1: 123输入: head = [4,5,1,9], node = 5输出: [4,1,9]解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9. 示例 2: 123输入: head = [4,5,1,9], node = 1输出: [4,5,9]解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9. 说明: 链表至少包含两个节点。 链表中所有节点的值都是唯一的。 给定的节点为非末尾节点并且一定是链表中的一个有效节点。 不要从你的函数中返回任何结果。 2. 解题：本题和我们之前的删除节点思路不同，node就是需要删除的节点，原地删除只需要将下一个节点值复制到该节点，然后删除下一个节点即可。 1234567891011121314/** * Definition for singly-linked list. * public class ListNode &#123; * int val; * ListNode next; * ListNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public void deleteNode(ListNode node) &#123; node.val = node.next.val; node.next = node.next.next; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-014-最长公共前缀]]></title>
+    <url>%2F2019%2F04%2F25%2FLeetCode-014%2F</url>
+    <content type="text"><![CDATA[1. 题目：最长公共前缀 编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 &quot;&quot;。 示例 1: 12输入: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出: &quot;fl&quot; 示例 2: 123输入: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]输出: &quot;&quot;解释: 输入不存在公共前缀。 说明: 所有输入只包含小写字母 a-z 。 2. 解题：利用两次循环。 以第一个字符串开始，判断其第i字符与数组中其他字符串的第i字符是否相等。 代码：1234567891011121314151617181920class Solution &#123; public String longestCommonPrefix(String[] strs) &#123; if (strs == null || strs.length == 0) return ""; StringBuilder strb = new StringBuilder(); for (int i = 0; i &lt; strs[0].length(); i++) &#123; char ch = strs[0].charAt(i); for (int j = 1; j &lt; strs.length; j++) &#123; if (i &lt; strs[j].length() &amp;&amp; ch == strs[j].charAt(i))&#123; continue; &#125; return strb.toString(); &#125; strb.append(ch); &#125; return strb.toString(); &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>公共子串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-038-报数]]></title>
     <url>%2F2019%2F04%2F24%2FLeetCode-038%2F</url>
     <content type="text"><![CDATA[1. 题目：报数 报数序列是一个整数序列，按照其中的整数的顺序进行报数，得到下一个数。其前五项如下： 123451. 12. 113. 214. 12115. 111221 1 被读作 &quot;one 1&quot; (&quot;一个一&quot;) , 即 11。11 被读作 &quot;two 1s&quot; (&quot;两个一&quot;）, 即 21。21 被读作 &quot;one 2&quot;, “one 1&quot; （&quot;一个二&quot; , &quot;一个一&quot;) , 即 1211。 给定一个正整数 n（1 ≤ n ≤ 30），输出报数序列的第 n 项。 注意：整数顺序将表示为一个字符串。 示例 1: 12输入: 1输出: &quot;1&quot; 示例 2: 12输入: 4输出: &quot;1211&quot; 2. 解题：首先，需要读懂题意： 报数：指的是 把当前字符串中，每个数字个个数报出 1234n = 1: 1 : 1个1 11n = 2: 11 : 2个1 21n = 3: 21 : 1个2,1个1 1211n = 4: 1211 : 1个1,1个2,2个1 111221 n的值与n-1有关 所以每次都是从１开始 两个关键：当前数字，当前数字的个数 代码：12345678910111213141516171819202122232425262728class Solution &#123; public String countAndSay(int n) &#123; //初始化第一个 String str = "1"; //从１开始，计算到n for (int i = 1; i &lt; n; i++) &#123; //用来判断当前计算完成 int k = 0; //记录每一次计算的结果 StringBuilder strB = new StringBuilder(); while (k &lt; str.length()) &#123; //当前数字 char ch = str.charAt(k); //记录当前字符的个数 int count = 0; while (k &lt; str.length() &amp;&amp; ch == str.charAt(k)) &#123; count++; k++; &#125; strB.append(count); strB.append(ch); &#125; str = strB.toString(); &#125; return str; &#125;&#125;]]></content>
@@ -365,8 +411,8 @@
       </categories>
       <tags>
         <tag>二叉树</tag>
-        <tag>前序遍历</tag>
         <tag>中序遍历</tag>
+        <tag>前序遍历</tag>
       </tags>
   </entry>
   <entry>

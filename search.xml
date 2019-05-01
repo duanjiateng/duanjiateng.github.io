@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-098-验证二叉搜索树]]></title>
+    <url>%2F2019%2F05%2F01%2FLeetCode-098%2F</url>
+    <content type="text"><![CDATA[1. 题目：验证二叉搜索树 给定一个二叉树，判断其是否是一个有效的二叉搜索树。 假设一个二叉搜索树具有如下特征： 节点的左子树只包含小于当前节点的数。 节点的右子树只包含大于当前节点的数。 所有左子树和右子树自身必须也是二叉搜索树。 示例 1: 12345输入: 2 / \ 1 3输出: true 示例 2: 123456789输入: 5 / \ 1 4 / \ 3 6输出: false解释: 输入为: [5,1,4,null,null,3,6]。 根节点的值为 5 ，但是其右子节点值为 4 。 2. 解题：使用中序遍历的思想，二叉搜索树的中序遍历是从小到大的有序序列。因此我们按照中序遍历的顺序，判断前一个是否小于下一个即可。 要注意int越界问题。 代码：123456789101112131415161718192021222324252627/** * Definition for a binary tree node. * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; //最小值 private long last = Long.MIN_VALUE; public boolean isValidBST(TreeNode root) &#123; if (root == null) return true; //判断左子树是否为BST if (isValidBST(root.left)) &#123; //判断中序是否有序 if (last &lt; root.val) &#123; last = root.val; //判断右子树是否为BST return isValidBST(root.right); &#125; &#125; return false; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+        <tag>平衡二叉树</tag>
+        <tag>中序遍历</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-104-二叉树的最大深度]]></title>
     <url>%2F2019%2F04%2F27%2FLeetCode-104%2F</url>
     <content type="text"><![CDATA[1. 题目：二叉树的最大深度 给定一个二叉树，找出其最大深度。 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 说明: 叶子节点是指没有子节点的节点。 示例：给定二叉树 [3,9,20,null,null,15,7]， 12345 3 / \9 20 / \ 15 7 返回它的最大深度 3 。 2. 解题：使用递归思想： 从根节点出发，查看其左右子树的深度，然后取其最大的＋１（当前层的深度）。 代码：12345678910111213141516171819/** * Definition for a binary tree node. * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public int maxDepth(TreeNode root) &#123; if (root == null) return 0; int leftMax = maxDepth(root.left); int rightMax = maxDepth(root.right); return ((leftMax &gt; rightMax) ? leftMax : rightMax) + 1; &#125;&#125;]]></content>
@@ -457,8 +470,8 @@
       </categories>
       <tags>
         <tag>二叉树</tag>
-        <tag>前序遍历</tag>
         <tag>中序遍历</tag>
+        <tag>前序遍历</tag>
       </tags>
   </entry>
   <entry>

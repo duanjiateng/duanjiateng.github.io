@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-088-合并两个有序数组]]></title>
+    <url>%2F2019%2F05%2F05%2FLeetCode-088%2F</url>
+    <content type="text"><![CDATA[1. 题目：合并两个有序数组 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。 说明: 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。 示例: 12345输入:nums1 = [1,2,3,0,0,0], m = 3nums2 = [2,5,6], n = 3输出: [1,2,2,3,5,6] 2. 解题：合并两个数组，我们选择从后往前，这样只需要赋值不需要交换。 情况一：当nums2为null时（n == 0），直接返回nums1； 情况二：当nums1为null时（m == 0），直接返回nums2； 情况三：两个数组从后往前比较，将较大的放在后边。当nums2都放入后，那么直接返回；当nums1都放入后，将nums2覆盖到nums1之前的。 代码：12345678910111213141516171819202122232425class Solution &#123; public void merge(int[] nums1, int m, int[] nums2, int n) &#123; if (n == 0) return; if (m == 0) &#123; for (int i = 0; i &lt; n; i++) &#123; nums1[i] = nums2[i]; &#125; return; &#125; int p1 = m - 1; int p2 = n - 1; int len = m + n - 1; while (p2 &gt;= 0 || p1 &gt;= 0) &#123; //nums2都放入，直接返回 if (p2 &lt; 0) return; //判断nums1是否都放入 int num1 = (p1 &lt; 0) ? Integer.MIN_VALUE : nums1[p1]; nums1[len--] = (num1 &lt;= nums2[p2]) ? nums2[p2--] : nums1[p1--]; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-108-将有序数组转换为二叉搜索树]]></title>
     <url>%2F2019%2F05%2F02%2FLeetCode-108%2F</url>
     <content type="text"><![CDATA[1. 题目：将有序数组转换为二叉搜索树 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。 本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。 示例: 123456789给定有序数组: [-10,-3,0,5,9],一个可能的答案是：[0,-3,9,-10,null,5]，它可以表示下面这个高度平衡二叉搜索树： 0 / \ -3 9 / / -10 5 2. 解题：二叉搜索树的中序遍历就是一个有序的数组。因此这个题就是中序遍历的逆过程。 代码：12345678910111213141516171819202122232425262728/** * Definition for a binary tree node. * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public TreeNode sortedArrayToBST(int[] nums) &#123; if (nums == null || nums.length == 0) return null; return inverseInorder(nums, 0, nums.length-1); &#125; public TreeNode inverseInorder(int[] nums, int left, int right) &#123; if (left &gt; right) return null; int mid = left + (right - left) / 2; TreeNode root = new TreeNode(nums[mid]); root.left = inverseInorder(nums, left, mid-1); root.right = inverseInorder(nums, mid+1, right); return root; &#125; &#125;]]></content>
